@@ -35,7 +35,7 @@ function logMessage(value: string | number) {
   }
 }
 
-// #5.
+// #5. 함수의 매개변수에서 유니온 타입 써보기
 
 interface Developer {
   name: string; // 공통 속성
@@ -55,7 +55,11 @@ function askSomeone1(someone: Developer | Person) {
 
 // 인터섹션 타입(Intersection Type) "&"
 
+// #1. 인터섹션 타입(Intersection Type)은 여러 타입을 모두 만족하는 하나의 타입
+
 var capt: string & number & boolean; // never
+
+// #2. 함수의 매개변수에서 인터섹션 타입 써보기
 
 function askSomeone2(someone: Developer & Person) {
   // 인수의 타입이 Developer의 속성과 Person의 속성을 모두 가지고 있다는 것이 보장되므로, 두 타입의 모든 속성 제공
